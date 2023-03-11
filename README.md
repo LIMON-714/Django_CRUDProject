@@ -10,7 +10,7 @@ Clone this repository to your local machine using git clone <repository-url>.
 Navigate to the project directory using the cd command.
 Install the required packages by running pip install -r requirements.txt.
 Run the Django development server by running python manage.py runserver.
-Open a web browser and navigate to http://localhost:8000/ to view the blog.
+Open a web browser and navigate to http://localhost:8000/ .
 Usage
 In order to create, edit, and delete CRUD posts, you will need to log in with a registered account.
 
