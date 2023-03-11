@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{%block title %}
+Account
+{%endblock title %}
+
+{%block menu%}
+
+<li class="nav-item">
+  <a class="nav-link  text-danger " href="#">About</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link  text-danger " href="#">Contact Us</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-danger" href="{%url 'home'%}">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-danger" href="{% url 'singup'%}">SingUp</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-danger" href="{%url 'logout'%}">Logout</a>
+</li>
+</ul>
+{% endblock menu%}
+
+{%block head%}
+{% comment %} <h2 class="text-center alert alert-secondary col col-8 offset-2" style="">
+  CREATE ACCOUNT
+  </h2> {% endcomment %}
+{%endblock head%}
+
+{%block content%} 
+<section class="vh-100 gradient-custom ">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100" >
+      <div class="col-12 col-lg-9 col-xl-7" >
+        <div class="card shadow-2-strong card-registration" style="box-shadow:1px 1px 0 0 #ff69b4;border-radius: 15px; background-color:#444448; margin-top:-90px; width:140%;margin-left:-120px">
+          <div class="card-body p-2 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center text-white">CREATE ACCOUNT</h3>
+            <form method="POST" enctype="multipart/form-data">
+              {%csrf_token%}
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputName" class="form-label text-white">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp" name ='name' required>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ='email' required>
+                  </div>
+
+                </div>
+
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputAge" class="form-label text-white">your Age</label>
+                    <input type="text" class="form-control" id="exampleInputAge" aria-describedby="AgeHelp" name ='age' required>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputAge" class="form-label text-white">Gender</label>
+                        <select class="form-select" aria-label="Default select example" name ='gender'>
+                          <option selected>Seclect Gender</option>
+                           <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputPhone" class="form-label text-white">Phone</label>
+                    <input type="tel" class="form-control" id="exampleInputPhone" aria-describedby="PhoneHelp" name ='phone'required>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <label for="exampleInputAdress" class="form-label text-white">Address</label>
+                    <input type="text" class="form-control" id="exampleInputAdress" aria-describedby="AderssHelp" name ='address'required>
+                  </div>
+
+                </div>
+          
+
+                  <div class="mb-3">
+                    <label for="exampleInputImage" class="form-label text-white">Image</label>
+                    <input type="file" class="form-control" id="exampleInputImage" aria-describedby="ImageHelp" name ='image' >
+                  </div>
+
+               
+              
+
+              <div class="mt-2 pt-2" >
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+{%endblock content%}

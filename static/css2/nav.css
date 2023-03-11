@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    height: 40px;
+    padding: 0 80px;
+    margin: auto;
+
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+/* nav bar Style */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 36px 0;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3 ease;
+    -webkit-transition: all 0.3 ease;
+    -moz-transition: all 0.3 ease;
+    -ms-transition: all 0.3 ease;
+    -o-transition: all 0.3 ease;
+}
+
+
+
+.navbar.sticky{
+    padding: 20px 0;
+    background:#001C40;
+    transition: all 1s ease;
+    border: 1px solid #001C40;
+}
+.navbar.sticky:hover{
+    transition: 0.4s;
+    box-shadow: 0 3px 5px 0 rgb(235, 168, 168);
+    transition: all 0.3 ease;
+    
+    
+}
+
+.navbar .max-width{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size:25px;
+    font-weight:500;
+    color: #fff;
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar.sticky .logo a span{
+    color:darkgrey;
+    transition: all 0.3 ease;
+    -webkit-transition: all 0.3 ease;
+    -moz-transition: all 0.3 ease;
+    -ms-transition: all 0.3 ease;
+    -o-transition: all 0.3 ease;
+}
+
+
+
+.navbar .menu  li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left:23px;
+    transition:color 0.3s ease  ;
+    -webkit-transition:color 0.3s ease  ;
+    -moz-transition:color 0.3s ease  ;
+    -ms-transition:color 0.3s ease  ;
+    -o-transition:color 0.3s ease  ;
+}
+.navbar .menu li a:hover{
+    color:crimson;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+    text-decoration: underline;
+    transition: underline 0.5s  ;
+    -webkit-transition: underline 0.5s  ;
+    -moz-transition: underline 0.5s  ;
+    -ms-transition: underline 0.5s  ;
+    -o-transition: underline 0.5s  ;
+}
+
+/* menu style here */
+.menu-btn{
+    color: #fff;
+    font-size:20px;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+
+
+
+
+/* home section start here */
+
+.home{
+    display:flex;
+    background:url("images/ll.webp") no-repeat center;
+    background-color: black;
+    height:94vh;
+    width:110%;
+    color:#fff;
+    min-height: 500px;
+    font-family: "ubuntu",sans-serif;
+    
+}
+
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size:22px;
+}
+
+.home .home-content .text-2{
+    font-size:48px;
+    font-weight:500;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size:30px;
+    margin: 5px 0
+}
+.home .home-content a{
+    display: inline-block;
+    background:#001C40;
+    color:#fff;
+    border-radius: 6px;
+    border: 1px solid #001C40;
+    font-size: 14px;
+    padding:10px 30px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s ease  ;
+    -webkit-transition: all 0.3s ease  ;
+    -moz-transition: all 0.3s ease  ;
+    -ms-transition: all 0.3s ease  ;
+    -o-transition: all 0.3s ease  ;
+}
+.home .home-content a:hover{
+    box-shadow: 0 2px 4px 0px rgb(247, 152, 199);
+    /* transition: all 0.3s ease ; */
+    background:none;
+   
+}
+
+
+.home .home-content .text-3 span{
+   color:crimson;
+   font-weight: 500;
+}
+
+/* responsive media player start here */
+
+@media (max-width:1104px){
+    .home {
+        margin-left:0px;
+    }
+    .max-width{
+        margin-left: 0px;
+    }
+
+}
+
+
+@media (max-width:991px){
+    .max-width{
+        padding:0px 50px;
+    } 
+}
+
+
+@media (max-width:947px) {
+    .max-width{
+        padding:0 50px;
+    }
+    /* .menu-btn{
+       
+        display:block;
+        z-index:999;
+    
+    }
+    .menu-btn i.active::before{
+        content:"\f00d";
+
+    }
+
+    .navbar .menu{
+        position:fixed;
+        height:100vh;
+        width:100%;
+        left:-100%;
+        top:0;
+        background:#111;
+        text-align: center;
+        padding-top: 50px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left:0;
+
+     }
+
+
+    .navbar .menu li{
+        display:block;
+    }
+    .navbar .menu li a{
+        display:inline-block;
+        margin: 15px 0;
+        font-size:15px;
+    }
+ */
+    .home .home-content .text-2{
+        font-size:42px;
+
+    }
+    .home .home-content .text-3{
+        font-size:25px;
+    }
+    .home .home-content a{
+        font-size:14px;
+        padding:8px 17px;
+    }
+
+
+}
+
+@media (max-width:690px){
+    .max-width{
+        padding: 0 20px;
+    }
+    .home .home-content .text-2{
+        font-size:34px;
+    }
+    .home .home-content .text-3{
+        font-size:19px;
+    }
+}
+
+@media (max-width:500px){
+    .max-width{
+        padding: 0 20px;
+    }
+    .home .home-content .text-2{
+        font-size:34px;
+    }
+    .home .home-content .text-3{
+        font-size:19px;
+    }
+}
